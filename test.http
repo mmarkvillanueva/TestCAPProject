@@ -26,3 +26,16 @@ GET http://localhost:4004/v2/catalog/Users
 ###
 GET http://localhost:4004/v2/catalog/Actions
 ###
+
+POST http://localhost:4004/v2/catalog/Users
+Content-Type: application/json
+
+{
+    "organizationId": "fb69919b-4b78-4457-acd9-9a75919182f3",
+    "userTypeId": "67c267a9-07e0-4c74-a2e5-8bd53791eb1d",
+    "parentId": "bf344c73-e199-4bc4-b860-ebf2f4b83443",
+    "firstName": "FirstName",
+    "lastName": "LastName",
+    "dateOfBirth": "/Date(328924800000)/",
+    "contactNumber": "134556"
+}
