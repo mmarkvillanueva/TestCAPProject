@@ -1,0 +1,6 @@
+﻿actionId,userId_userId,actionValue,actionDate,actionTime,predictedActionResult,predictionDate,predictionTime,actualActionResult,actualActionDate,actualActionTime
+07ddac5b-bb88-4e16-8ba2-6178f660288a,789b1353-a4b9-412c-97c1-bf616ebef823,medicineTakenReading,2023-04-01,12:00:00,on,2023-04-01,12:04:00,on,2023-04-01,12:08:00
+2bea39db-fa1b-4a44-b76b-d73680dbe005,a520bf78-89c4-4890-b4ad-c754325acf26,diastolicPressureReading,2023-04-02,12:01:00,off,2023-04-02,12:05:00,off,2023-04-02,12:09:00
+52e935de-f075-43d7-8379-1d4723c4e020,7df12f93-382f-45a3-a0a3-9b970945b79e,spiralImageLink,2023-04-03,12:02:00,on,2023-04-03,12:06:00,on,2023-04-03,12:10:00
+9904754f-4ae0-4657-b4eb-75cee57245ef,5ed3ed28-0175-4a1b-88ca-ea138b2ffa74,diastolicPressureReading,2023-04-04,12:03:00,on,2023-04-04,12:07:00,on,2023-04-04,12:11:00
+f0d275b3-ab35-405e-b282-451683c97650,91484f45-f0e0-420b-86ce-4fa302c7d1c3,spiralImageLink,2023-04-05,12:04:00,on,2023-04-05,12:08:00,on,2023-04-05,12:12:00

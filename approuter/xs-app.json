@@ -1,0 +1,16 @@
+{
+    "authenticationMethod": "route",
+    "sessionTimeout": 30,
+    "logout": {
+      "logoutEndpoint": "/do/logout",
+      "logoutPage": "/"
+    },
+    "routes": [
+      {
+        "source": "^/(.*)$",
+        "destination": "srv-binding",
+        "authenticationType": "xsuaa",
+        "csrfProtection": false
+      }
+    ]
+  }

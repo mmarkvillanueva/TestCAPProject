@@ -1,0 +1,87 @@
+{
+    "name": "TestCAPProject",
+    "version": "0.0.1",
+    "repository": "<Add your repository here>",
+    "license": "UNLICENSED",
+    "description": "Test CAP Project",
+    "engines": {
+        "node": "^16"
+    },
+    "dependencies": {
+        "@sap/audit-logging": "^5",
+        "@sap/cds": "^6.6",
+        "@sap/cds-odata-v2-adapter-proxy": "^1",
+        "@sap/xsenv": "^3.4.0",
+        "@sap/xssec": "^3.2.17",
+        "debug": "^4.3",
+        "express": "^4",
+        "hdb": "^0.19",
+        "passport": "^0.4.1"
+    },
+    "scripts": {
+        "start": "cds run",
+        "watch-patients": "cds watch --open patients/webapp/index.html?sap-ui-xx-viewCache=false",
+        "undeploy": "cf undeploy TestCAPProject --delete-services --delete-service-keys --delete-service-brokers",
+        "build": "rimraf resources mta_archives && mbt build --mtar archive",
+        "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
+    },
+    "eslintConfig": {
+        "extends": "eslint:recommended",
+        "env": {
+            "es2020": true,
+            "node": true,
+            "jest": true,
+            "mocha": true
+        },
+        "globals": {
+            "SELECT": true,
+            "INSERT": true,
+            "UPDATE": true,
+            "DELETE": true,
+            "CREATE": true,
+            "DROP": true,
+            "CDL": true,
+            "CQL": true,
+            "CXL": true,
+            "cds": true
+        },
+        "rules": {
+            "no-console": "off",
+            "require-atomic-updates": "off"
+        }
+    },
+    "cds": {
+        "requires": {
+            "auth": {
+                "restrict_all_services": false
+            },
+            "db": {
+                "[production]": {
+                    "kind": "hana-cloud",
+                    "model": [
+                        "db/data-config",
+                        "db/data-test"
+                    ]
+                },
+                "[development]": {
+                    "kind": "sql",
+                    "model": [
+                        "db/data-config",
+                        "db/data-test"
+                    ]
+                },
+                "model": [
+                    "db",
+                    "srv"
+                ]
+            }
+        }
+    },
+    "sapux": [
+        "app/patients"
+    ],
+    "devDependencies": {
+        "@sap/ux-specification": "^1.108.2",
+        "rimraf": "^3.0.2"
+    }
+}
