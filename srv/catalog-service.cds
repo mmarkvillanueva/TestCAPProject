@@ -2,6 +2,8 @@ using {TestCAPProject.db as db} from '../db/data-model';
 
 service CatalogService @(path : '/catalog')
 {
+    @sap.searchable                             : 'true'
+    @Capabilities.SearchRestrictions.Searchable : true
     entity Sales
       as select * from db.Sales
       actions {

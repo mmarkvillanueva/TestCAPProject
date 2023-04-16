@@ -12,13 +12,21 @@ entity Sales {
 };
 
 entity Users {
+      @UI.Hidden
   key userId         : UUID @(Core.Computed: true);
+      @UI.Hidden
       organizationId : UUID;
+      @UI.Hidden
       userTypeId     : UUID;
+      @UI.Hidden
       parentId       : UUID;
+      @Search.defaultSearchElement: true
       firstName      : String(100);
+      @Search.defaultSearchElement: true
       lastName       : String(100);
+      @Search.defaultSearchElement: true
       dateOfBirth    : Date;
+      @Search.defaultSearchElement: true
       contactNumber  : String(50);
 }
 

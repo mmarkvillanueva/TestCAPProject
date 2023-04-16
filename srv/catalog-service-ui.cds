@@ -1,7 +1,7 @@
 using CatalogService as service from './catalog-service';
 
 annotate service.Users with {
-    firstName @title : 'First Name';
+    firstName @title: 'First Name';
     lastName @title: 'Last Name';
     contactNumber @title: 'Contact Number';
     dateOfBirth @title: 'Date of Birth';
